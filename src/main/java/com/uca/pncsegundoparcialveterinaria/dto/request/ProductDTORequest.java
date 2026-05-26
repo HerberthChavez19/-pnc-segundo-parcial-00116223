@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Builder
-public record productDTORequest(
+public record ProductDTORequest(
         @NotNull(message = "El nombre del producto no puede ser nulo")
         @NotBlank(message = "El nombre del producto no puede estar vacio")
         String name,

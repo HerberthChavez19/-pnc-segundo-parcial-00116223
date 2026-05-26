@@ -1,11 +1,11 @@
 package com.uca.pncsegundoparcialveterinaria.utils;
 
-import com.uca.pncsegundoparcialveterinaria.dto.request.productDTORequest;
-import com.uca.pncsegundoparcialveterinaria.dto.response.productDTOResponse;
+import com.uca.pncsegundoparcialveterinaria.dto.request.ProductDTORequest;
+import com.uca.pncsegundoparcialveterinaria.dto.response.ProductDTOResponse;
 import com.uca.pncsegundoparcialveterinaria.entities.Product;
 
 public class ProductMapper {
-    public static Product toEntity(productDTORequest ProductDTORequest){
+    public static Product toEntity(ProductDTORequest ProductDTORequest){
         return Product.builder()
                 .name(ProductDTORequest.name())
                 .description(ProductDTORequest.description())
@@ -17,8 +17,8 @@ public class ProductMapper {
                 .build();
     }
 
-    public static productDTOResponse toResponse(Product product){
-        return new productDTOResponse(
+    public static ProductDTOResponse toResponse(Product product){
+        return new ProductDTOResponse(
                 product.getId(),
                 product.getName(),
                 product.getDescription(),
