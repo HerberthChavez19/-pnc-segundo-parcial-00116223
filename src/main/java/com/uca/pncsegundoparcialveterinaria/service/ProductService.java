@@ -1,6 +1,5 @@
 package com.uca.pncsegundoparcialveterinaria.service;
 
-import com.uca.pncsegundoparcialveterinaria.dto.GeneralResponse;
 import com.uca.pncsegundoparcialveterinaria.dto.request.ProductDTORequest;
 import com.uca.pncsegundoparcialveterinaria.dto.response.ProductDTOResponse;
 import com.uca.pncsegundoparcialveterinaria.entities.Product;
@@ -9,10 +8,7 @@ import com.uca.pncsegundoparcialveterinaria.exception.ProductNotFoundException;
 import com.uca.pncsegundoparcialveterinaria.repository.ProductRepository;
 import com.uca.pncsegundoparcialveterinaria.utils.ProductMapper;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.math.BigDecimal;
 import java.util.List;
