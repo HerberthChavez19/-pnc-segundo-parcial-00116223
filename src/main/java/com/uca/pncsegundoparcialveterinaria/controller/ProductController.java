@@ -49,4 +49,13 @@ public class ProductController {
                 .build());
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<GeneralResponse> deletePokemon(@PathVariable Long id) {
+        productService.deleteProductById(id);
+        return ResponseEntity.ok(GeneralResponse.builder()
+                .data(productService.findProductById(id))
+                .message("Pokemon has been deleted")
+                .build());
+    }
+
 }
